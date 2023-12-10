@@ -3,14 +3,14 @@ import Project from "../Components/Projects.jsx";
 
 const Welcome = () => {
 
-    const [background, setBackground] = useState('#')
+    const [background, setBackground] = useState("galaxy")
     const [text, setText] = useState(false)
 
     const getBackgroundImageUrl = (background) => {
         // Replace with your logic to determine the URL for each background
         if (background === "mars") {
-            return "https://images.unsplash.com/photo-1486845918423-c82bbda48d29?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-        } if (background === "galaxy") {
+            return "https://images.unsplash.com/photo-1630694093867-4b947d812bf0?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        } else if (background === "galaxy") {
             return "https://images.unsplash.com/photo-1581822261290-991b38693d1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         }
     };
