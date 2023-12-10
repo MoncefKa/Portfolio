@@ -27,8 +27,8 @@ export default {
         card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
       },
       backgroundImage:{
-        'galaxy':"url('https://images.unsplash.com/photo-1516331138075-f3adc1e149cd?q=80&w=2108&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-      }
+        'galaxy':"url('https://images.unsplash.com/photo-1581822261290-991b38693d1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+      },
     },
   },
   plugins: [],

@@ -33,7 +33,7 @@ const Navbar = () => {
                             }
                         }} color="#E3651D" rounded />
                         {isOpen && (
-                            <div className="fixed top-0 left-0 h-screen w-1/2 bg-white flex flex-col z-50">
+                            <div className="fixed bottom-0 left-0 h-screen w-1/2 bg-white p-5 flex-col z-50">
                                 <div className="p-4">Menu Item 1</div>
                                 <div className="p-4">Menu Item 2</div>
                                 <div className="p-4">Menu Item 3</div>
