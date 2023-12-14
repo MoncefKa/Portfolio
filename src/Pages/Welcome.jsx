@@ -1,8 +1,7 @@
 import { useEffect, useState, Suspense } from "react";
-import Project from "../Components/Projects.jsx";
+import { Skills, Navbar, Projects } from "../Components/Dynamic/DynamicComp";
 
 const Welcome = () => {
-
     const [background, setBackground] = useState("galaxy")
     const [text, setText] = useState(false)
 
@@ -16,33 +15,39 @@ const Welcome = () => {
     };
 
     return (
-        <div className="w-full h-full mt-5">
-            <div style={{ backgroundImage: `url('${getBackgroundImageUrl(background)}')` }} className={`w-auto h-[85vh] bg-fixed bg-center bg-no-repeat mt-2`}>
-                <div className="w-full h-full flex items-center">
-                    <div className="m-auto" >
-                        <div className="h-[9vh] w-[35vw]" onMouseEnter={() => { setBackground("mars"); setText(true) }} onMouseLeave={() => { setBackground("galaxy"); setText(false) }}>
-                            {!text ?
-                                <div>
-                                    <h1 className={`uppercase text-center text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#872341] to-[#ED7D31] font-bold border-2 border-orange-400 p-5`} >
-                                        portfolio
-                                    </h1>
-                                </div> :
-                                <div>
-                                    <h1 className="uppercase text-center text-teal-50 text-lg font-bold">
-                                        Greetings! I am Moncef Karmaoui, a dedicated Data Scientist with an unbridled passion for unraveling the complexities of machine learning.
-                                    </h1>
-                                </div>
-                            }
+        <div className="w-full h-screen bg-fixed bg-center bg-no-repeat" style={{ backgroundImage: `url('${getBackgroundImageUrl(background)}')` }}>
+            <Navbar />
+
+            <div className="flex items-center justify-center h-[90vh]">
+                <div className="m-auto" onMouseEnter={() => { setBackground("mars") }} onMouseLeave={() => { setBackground("galaxy") }}>
+                    {!text ? (
+                        <div className="w-full flex items-stretch justify-center">
+                            <h1 className={`uppercase text-center text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#872341] to-[#ED7D31] font-bold border-2 border-orange-400 p-8`}>
+                                portfolio
+                            </h1>
                         </div>
-                    </div>
+                    ) : (
+                        <div>
+                            <h1 className="uppercase text-center text-teal-50 text-lg font-bold">
+                                Greetings! I am Moncef Karmaoui, a dedicated Data Scientist with an unbridled passion for unraveling the complexities of machine learning.
+                            </h1>
+                        </div>
+                    )}
                 </div>
             </div>
-            <div className="w-full h-[75vh]">
+            <div className="w-full h-[65vh]">
                 <div className="w-full h-full m-auto">
-                    <Project/>
+                    <Skills />
+                </div>
+            </div>
+            <div className="w-full h-[75vh] bg-[#0F0F0F]">
+                <div className="w-full h-full m-auto">
+                    <Projects />
                 </div>
             </div>
         </div>
+
+
     )
 }
 export default Welcome;
