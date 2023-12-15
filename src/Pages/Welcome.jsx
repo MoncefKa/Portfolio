@@ -35,12 +35,12 @@ const Welcome = () => {
                     )}
                 </div>
             </div>
-            <div className="w-full h-[65vh]">
+            <div className="w-full h-[98vh]">
                 <div className="w-full h-full m-auto">
                     <Skills />
                 </div>
             </div>
-            <div className="w-full h-[75vh] bg-[#0F0F0F]">
+            <div className="w-full h-[85vh] bg-[#0F0F0F]">
                 <div className="w-full h-full m-auto">
                     <Projects />
                 </div>
